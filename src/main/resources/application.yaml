@@ -1,3 +1,16 @@
+server:
+  port: 8080
+
 spring:
-  application:
-    name: todo_api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo
+    username: todo
+    password: todo
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
